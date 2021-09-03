@@ -1,53 +1,109 @@
+<!DOCTYPE HTML>  
+<html>  
+    <header>
+        <link rel="stylesheet" href="style.css">
+    </header>
+    <body>  
+        <h1>Berkeley Restaurants</h1>
 
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JSFiddle</title>
+        <div id="showDataJSON"></div>
+        <br/>
+        <div id="showDataXML"></div>
+    </body>
 
-      <meta name="robots" content="index, follow">
-      <meta name="googlebot" content="index, follow">
+    <script>
 
-      <script type="text/javascript">
-        var height
-        var force_height = null
-        var slug = "cwfsdbex"
-        var show_src = "//fiddle.jshell.net/cwfsdbex/5/show/light/"
-        var resize_element_counter = 0
-        var shell_edit_url = "/cwfsdbex/5/light/"
-      </script>
+        /*
+         * JSON
+         * - Get JSON data from file
+         * - Get headers from retrieved data
+         * - Set headers for table
+         * - Add data to table
+         * - Add table to DOM
+        */
 
-      <script src="/js/embed/embed.js"></script>
-      <link rel="stylesheet" media="screen" href="/css/embed/embed-light.css" />
-      <link rel="icon" href="/img/favicon.png">
-  </head>
-  <body id="sylvester-standalone">
-    <a class="toEditor" href="//jsfiddle.net/cwfsdbex/5/" target="_blank">
-      <svg width='34' height='40'>
-      <use xlink:href='//jsfiddle.net/sprite.svg#logo'></use>
-    </svg>Edit in JSFiddle
-    </a>
+        let jsonData;
+        let xhrJson = new XMLHttpRequest();
+        xhrJson.open('GET', './data.json', false); 
+        xhrJson.send();
+        if(xhrJson.status == 200) { 
+            jsonData = JSON.parse(xhrJson.responseText);
+        }
 
-    <div id="result">
-      <div id="click-to-run">
-        <div class="ctrCont">
-          <svg width='70' height='70'>
-      <use xlink:href='//jsfiddle.net/sprite.svg#embed-run'></use>
-    </svg>
-          <section>
-            <strong>Run this fiddle</strong>
-            <span>
-              Run code only from a trusted source.<br>
-              Don't fall for scams (crypto, Bitcoin, ETH, etc).
-            </span>
-          </section>
-        </div>
-      </div>
-    </div>
+        var jsonHeaders = [];
+        let restaurant = jsonData.restaurants[0];
+        for (let key in restaurant) {
+            jsonHeaders.push(key);
+        }
 
-    
-  </body>
+        var jsonTable = document.createElement("table");
+
+        var tr = jsonTable.insertRow(-1);                 
+        for (let key in jsonHeaders) {
+            var th = document.createElement("th");      
+            th.innerHTML = jsonHeaders[key];
+            tr.appendChild(th);
+        }
+
+        for (let key in jsonData.restaurants) {
+            tr = jsonTable.insertRow(-1);
+            let restaurant = jsonData.restaurants[key];
+            for (let rest_key in restaurant) {
+                var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = restaurant[rest_key];
+            }
+        }
+
+        var divContainer = document.getElementById("showDataJSON");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(jsonTable);
+
+        /*
+         * XML
+         * - Get XML data from file
+         * - Get headers from retrieved data
+         * - Set headers for table
+         * - Add data to table
+         * - Add table to DOM
+        */
+
+        let xmlFile = new XMLHttpRequest();
+        xmlFile.open("GET", "./data.xml", false);
+        xmlFile.send();
+        let xmlData = xmlFile.responseXML;
+
+        let xmlRestaurants = xmlData.getElementsByTagName("restaurant")
+        let xmlHeaders = [];
+        for (let j = 0; j < xmlRestaurants[0].childNodes.length; j++) {
+            //makes sure this isn't a text node, which is just whitespace
+            if(xmlRestaurants[0].childNodes[j].nodeType !== 3){
+                xmlHeaders.push(xmlRestaurants[0].childNodes[j].nodeName);
+            }
+        }
+
+        var xmlTable = document.createElement("table");
+
+        var tr = xmlTable.insertRow(-1);      
+        for (let key in xmlHeaders) {
+            var th = document.createElement("th");      
+            th.innerHTML = xmlHeaders[key];
+            tr.appendChild(th);
+        }
+        
+        for (var i = 0; i < xmlRestaurants.length; i++) {
+            tr = xmlTable.insertRow(-1);
+            for (var j = 0; j < xmlRestaurants[i].childNodes.length; j++) {
+                if (xmlRestaurants[i].childNodes[j].nodeType !== 3){
+                    var tabCell = tr.insertCell(-1);
+                    tabCell.innerHTML = xmlRestaurants[i].childNodes[j].textContent;
+                }
+                
+            }
+        }
+
+        var divContainer2 = document.getElementById("showDataXML");
+        divContainer2.innerHTML = "";
+        divContainer2.appendChild(xmlTable);
+
+    </script>  
 </html>
