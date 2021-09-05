@@ -1,0 +1,24 @@
+{
+	"publications": [{
+		"id": "0",
+		"title": "publication 1",
+		"authors": "test student, et al.",
+		"venue": "ACL",
+		"year": "2021"
+	},
+	{
+		"id": "1",
+		"title": "publication 2",
+		"authors": "test student, et al.",
+		"venue": "EMNLP",
+		"year": "2020"
+	},
+	{
+		"id": "2",
+		"title": "publication 3",
+		"authors": "test student",
+		"venue": "ACL Workshop",
+		"year": "2019"
+	}]
+	
+}
