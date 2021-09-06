@@ -1,24 +1,24 @@
 {
 	"publications": [{
-		"id": "0",
-		"title": "publication 1",
-		"authors": "test student, et al.",
-		"venue": "ACL",
-		"year": "2021"
+		"Id": "0",
+		"Title": "Publication 1",
+		"Authors": "Test Student, et al.",
+		"Venue": "ACL",
+		"Year": "2021"
 	},
 	{
-		"id": "1",
-		"title": "publication 2",
-		"authors": "test student, et al.",
-		"venue": "EMNLP",
-		"year": "2020"
+		"Id": "1",
+		"Title": "Publication 2",
+		"Authors": "Test Student, et al.",
+		"Venue": "EMNLP",
+		"Year": "2020"
 	},
 	{
-		"id": "2",
-		"title": "publication 3",
-		"authors": "test student",
-		"venue": "ACL Workshop",
-		"year": "2019"
+		"Id": "2",
+		"Title": "publication 3",
+		"Authors": "Test Student",
+		"Venue": "ACL Student Workshop",
+		"Year": "2019"
 	}]
 	
 }

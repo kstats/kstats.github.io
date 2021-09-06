@@ -2,6 +2,7 @@
 <html>  
     <header>
         <link rel="stylesheet" href="style.css">
+        <title>My Webpage Title</title>
     </header>
     <body>  
         <!-- Navigation-->
@@ -24,6 +25,7 @@
         </header>
         
         <center>
+            <br /><br />
             <div id="showDataJSON"></div>
         </center>
     </body>
@@ -43,7 +45,7 @@
             .then(data => {
                 var jsonTable = document.createElement("table");
                 var tr = jsonTable.insertRow(-1);   
-
+                jsonTable.style.width = "75%";
                 let root;
                 for (let prop in data) {
                     root = prop;
