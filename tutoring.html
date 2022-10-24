@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="This is the project website for Tutoring via Grounded Dialogue.">
+    <meta name="author" content="Katie Stasaski">
+
+    <!-- This title will show up at the top of the browser window, not in the Web page itself -->
+    <title>Tutoring via Grounded Dialogue</title>
+
+    <!-- favicons: these show at the top of your browser tab, etc. Visit http://www.favicon-generator.org/ to generate your own favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/eecs.iso">
+    <link rel="icon" type="image/iso" sizes="192x192" href="img/eecs.iso">
+    <link rel="icon" type="image/iso" sizes="32x32" href="img/eecs.iso">
+    <link rel="icon" type="image/iso" sizes="96x96" href="img/eecs.iso">
+    <link rel="icon" type="image/iso" sizes="16x16" href="img/eecs.iso">
+    <link rel="manifest" href="img/eecs.iso">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/img/eecs.iso">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- This is the jQuery plugin (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- These are the includes for Bootstrap CSS and JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    
+    <!-- favicons  -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/eecs.iso">
+    <link rel="icon" type="image/iso" sizes="192x192" href="img/eecs.iso">
+    <link rel="icon" type="image/iso" sizes="32x32" href="img/eecs.iso">
+    <link rel="icon" type="image/iso" sizes="96x96" href="img/eecs.iso">
+    <link rel="icon" type="image/iso" sizes="16x16" href="img/eecs.iso">
+
+
+</head>
+
+<body>
+
+   <!-- Fixed navbar -->
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <h1 id="brand-name"><a class="navbar-brand" href="tutoring.html"><font size=25>Tutoring via Grounded Dialogue</font></a></h1>
+         </div>
+        </div>
+      </nav>
+
+
+    <div class="container main-content">
+      <div class="row">
+         <div class="col-md-12">
+         <h2 class="page-header"></h2>
+         </div>
+      </div> <!-- row -->
+        <div class="row">
+          
+            <div class="col-md-9">
+              <h2>Project Goals</h2>
+                <p>Our goal is to build next-generation intelligent tutoring systems utilizing deep learning approaches.</p>
+
+            <p>Our project focuses on explaining problems to students via a dialogue setting in which interactions are grounded in an image.  Ultimately, the domains our project will apply to include foreign language learning, math, and science questions which have an accompanying image or diagram.  As a starting point, we began with the foreign language domain.</p>
+
+
+            <h2>Current Work</h2>
+<h3>Colored Shapes</h3>
+<p>We first collect a dataset of Amazon Mechanical Turk Crowdworkers role-playing the tutor and student learning the name of a colored shape.  We have Turkers reply with the next utterance in a conversation as well as a classification of the action taken at that utterance.  For each conversation, we collect three tutoring responses.</p>  
+
+<p>An example of this domain can be seen below:</p>
+
+<img src="colored_shape.png" style="width:75%;center">
+
+<p>Once data is collected, we experiment with language generation models to play the role of the tutor in a dialogue.  </p>
+
+<!--We compare three models trained to predict the next tutoring utterance given a current conversation.</p>
+
+<p>The first baseline model is a Seq2Seq which takes in the prior conversation and directly predicts the next tutoring utterance.  The second baseline model is a retrieval model which classifies the next action a tutor should take.  From that classification, we retrieve a response from our training dataset which accomplishes the action and post-process it to reflect the vocabulary in the current example.  Our final model, the action planning model, is trained with a joint objective to both (1) predict the next dialogue utterance and (2) predict the action a tutor should take next and the generation of that text.  We hypothesize this model will produce higher-quality output due to the higher-level planning incorporated with the action-level prediction.</p>
+
+<p>We evaluate these models on BLEU score.  We find the best-performing model to be the retrieval model, which we hypothesize is due to the limited domain and vocabulary used to describe colored shapes.  We do find improvement, however, between the vanilla Seq2Seq model and the action planning model, which indicates this may be a valuable model to explore in the future.</p>-->
+
+<h3>Prepositional Phrases</h3>
+
+<p>We have also extended our project the language learning domain of prepositional phrases involving colored objects.  This domain includes more complex vocabulary and grammar rules.  We collect a dataset utilizing Amazon Mechanical Turk of Turkers role-playing students and tutors.</p>
+
+<img src="new_prep_ex.png" style="width:100%;center">
+<br /><br />
+
+<p>Utilizing our resulting dataset, we are examining many deep learning approaches to generating the next tutoring utterance.  </p>
+
+<h2>Publications and Presentations</h2>
+
+<p>A preliminary version of this work was presented at the AWS re:Invent conference in October 2018.  Slides for this presentation can be viewed <a href="Amazon_ReInvent_Stasaski_final.pptx">here</a>.</p>
+
+<p>A publication for this project is under review.</p>
+                
+                <h2>People</h2>
+                <p><a href="http://people.ischool.berkeley.edu/~hearst/">Marti Hearst, PI</a></p>
+                <p><a href="https://people.eecs.berkeley.edu/~katie_stasaski/">Katie Stasaski, Ph.D. Student</a></p>
+                <p>Kimberly Kao</p>
+                <p>Kevin Lu</p>
+                <p>Kiran Girish</p>
+                <p>Avni Prasad</p>
+
+
+<h2>Project Support</h2>
+
+            <p>This research is supported in part by an AWS / Amazon ML grant, an Allen Institute for Artificial Intelligence grant, and a UC Berkeley Chancellor's fellowship.</p>
+
+            </div>
+
+        </div>
+        <!-- .row -->
+
+    </div>
+    <!-- .container -->
+
+    
+
+   <!-- This in the include to style code, if you put a code snippet into your website, for instructions, see: https://github.com/google/code-prettify -->
+   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+</body>
+
+</html>

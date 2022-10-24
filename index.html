@@ -1,45 +1,184 @@
-<!DOCTYPE HTML>  
-<html>  
-    <header>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="table_style.css">
-        <title>My Webpage Title</title>
-    </header>
-    <body>  
-        <!---Navigation--->
-        <!--This section of code defines the navigation bar at the top of the page.  The classes used here are defined in the style.css file.-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-                <!--This code defines the "My Webpage" link in the top left corner of the navigation pane-->
-                <a class="navbar-brand" href="./index.html">My Webpage</a>
-                <!--This code defines the "List" link in the top right corner of the navigation pane-->
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./list.html">List</a></li>
-                </ul>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="This is the Web page for Katie Stasaski, Ph.D. student in computer science.">
+    <meta name="author" content="Katie Stasaski">
+
+    <!-- This title will show up at the top of the browser window, not in the Web page itself -->
+    <title>Katie Stasaski, PhD Student</title>
+
+    <!-- favicons: these show at the top of your browser tab, etc. Visit http://www.favicon-generator.org/ to generate your own favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/eecs.iso">
+    <link rel="icon" type="image/iso" sizes="192x192" href="img/eecs.iso">
+    <link rel="icon" type="image/iso" sizes="32x32" href="img/eecs.iso">
+    <link rel="icon" type="image/iso" sizes="96x96" href="img/eecs.iso">
+    <link rel="icon" type="image/iso" sizes="16x16" href="img/eecs.iso">
+    <link rel="manifest" href="img/eecs.iso">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/img/eecs.iso">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- This is the jQuery plugin (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- These are the includes for Bootstrap CSS and JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- This is the include for the Academicons fonts -->
+    <link rel="stylesheet" href="css/academicons.min.css"/>
+
+    <!-- This is the include for the FontAwesome fonts -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- This is the include for your own personal style sheet -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- favicons  -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/eecs.iso">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/eecs.iso">
+    <link rel="icon" type="image/iso" sizes="192x192" href="img/eecs.iso">
+    <link rel="icon" type="image/iso" sizes="32x32" href="img/eecs.iso">
+    <link rel="icon" type="image/iso" sizes="96x96" href="img/eecs.iso">
+    <link rel="icon" type="image/iso" sizes="16x16" href="img/eecs.iso">
+
+
+</head>
+
+<body>
+
+   <!-- Fixed navbar -->
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <h1 id="brand-name"><a class="navbar-brand" href="index.html">Katie Stasaski</a></h1>
+         </div>
+         <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav pull-right">
+              <li id="about" class="active"><a href="index.html">About Me</a></li>
+              <li id="vitae"><a href="Katherine_Stasaski_Resume.pdf">CV</a></li>
+
+            </ul>
+         </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+
+
+    <div class="container main-content">
+      <div class="row">
+         <div class="col-md-12">
+         <h2 class="page-header">About Me</h2>
+         </div>
+      </div> <!-- row -->
+        <div class="row">
+            <div class="col-md-3">
+                <p></p><img class="resize" src="img/profile.jpg" alt="">
+                <table id="address" class="table">
+                    <tbody>
+                        <tr>
+                            <td style="width:45px"><i class="fa fa-home fa-lg" aria-hidden="true"></i></td>
+                            <td>1860 Leroy Ave<br/> Electrical Engineering and Computer Science<br/> UC Berkeley<br/> Berkeley, Ca 94720
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-phone fa-lg"></i></td>
+                            <td>(682) 564-6773</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></td>
+                            <td><a href="katie_stasaski@berkeley.edu">katie_stasaski@berkeley.edu</a></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+
             </div>
-        </nav>
-        <!--This section defines the middle section of the webpage-->
-        <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
+            <div class="col-md-9">
+                <p>I'm a sixth year Ph.D. student in computer science at the University of California, Berkeley, advised by <a href="http://people.ischool.berkeley.edu/~hearst/">Marti Hearst</a>.  My research lies at the intersection of natural language processing and education, and I am part of the <a href="http://acelab.berkeley.edu/">Algorithms for Computing Education Lab</a>.  I'm thankful to be funded by the NSF Graduate Research Fellowships Program and a UC Berkeley Chancellor's Fellowship.</p>
+
+                <p>I'm broadly interested in questions around how NLP can improve the effectiveness of traditional education, make education more accessible, and improve the teaching process for teachers.  I've recently worked on science question generation via an ontology and tutoring dialogue systems.  I am additionally interested in making dialogue systems more diverse and personalizable to individual users.</p>
+
+                <p>I previously attended the George Washington University for my Bachelor's degree, where I was advised by <a href = "https://www2.seas.gwu.edu/~simha/">Rahul Simha</a>.  I was in the <a href = "http://letr.seas.gwu.edu/">Learning Technology Research Group</a> and worked on a system which automatically generated reading questions and sent to a mobile applicaiton for illiterate adults learning to read.</p>
+                <p><br /><br /><b>Publications</b></p>
+<p> Stasaski, K. and Hearst, M.A., Semantic Diversity in Dialogue with Natural Language Inference. To appear at NAACL 2022.</p>
+<p> Stasaski, K., Rathod, M., Tu, T., Xiao, Y, and Hearst, M.A., <a href="https://www.aclanthology.org/2021.bea-1.17/">Automatically Generating Cause-and-Effect Questions from Passages</a>, BEA Workshop, EACL 2021.</p>
+<p> Akalin, A, Weinman, N., Stasaski, K., and Fox, A., <a href="https://dl.acm.org/doi/pdf/10.1145/3446871.3469790">Exploring the Impact of Gender Bias on Pair Programming</a>, ICER 2021.</p>
+<p> Stasaski, K. and Ramanarayanan, V. <a href = "https://drive.google.com/file/d/1FWpo07SDp-uR4GV3W6WLCGMlELemSRIP/view">Automatic Feedback Generation for Dialog-Based Language Tutors Using Transformer Models and Active Learning</a>. Human-in-the-Loop Dialogue Systems Workshop at NeurIPS 2020.</p>
+<p>Stasaski, K., Yang, G., and Hearst, M.A., <a href="https://www.aclanthology.org/2020.acl-main.446.pdf">More Diverse Dialogue Datasets via Diversity-Informed Data Collection</a>, ACL 2020. </p>
+<p>Stasaski, K., Kao, K., and Hearst, M.A., <a href="https://www.aclanthology.org/2020.bea-1.5.pdf">Construction of a Large Open Access Dialogue Dataset for Tutoring</a>, BEA Workshop, ACL 2020.</p>
+                <p>Stasaski, K and Hearst, M.A., <a href="http://www.aclanthology.org/W17-5034">Multiple Choice Question Generation Utilizing an Ontology</a>, BEA Workshop, EMNLP 2017.</p>
                 
-                <!-- This code is for the student name-->
-                <h1 class="masthead-heading text-uppercase mb-0">Test Student</h1>
-                <!--This code creates the two lines separating the student name from the subtitle-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!--This code creates the subheading underneath the line dividers-->
-                <p class="masthead-subheading font-weight-light mb-0">School of Information Student</p>
+
+
             </div>
-        </header>
-        <center>
-            <br /><br />
-            <div class="col-md-6 col-lg-4 mb-5">
-                <!-- put your bio paragraph here; remember to use the correct html tags -->
-		<p>Bio: I am a student at the School of Information at UC Berkeley. I am interested in Information Organization and Retrieval!</p>                
+
+        </div>
+        <!-- .row -->
+
+    </div>
+    <!-- .container -->
+
+    <footer class="container">
+        <div class="row">
+
+            <!-- academic icons: For more icons, please see https://jpswalsh.github.io/academicons/ -->
+            <div class="col-xs-12 col-sm-3 social-icons pull-right">
+
+               <a class="btn btn-primary btn-lg" href="https://github.com/kstats/"><i class="fa fa-github" title="Github"></i></a>
+
+               <!-- Visit Google Scholar to set up an account -->
+               <a class="btn btn-primary btn-lg" href="https://scholar.google.com/citations?user=NjMlxkMAAAAJ&hl=en&oi=ao"><i class="ai ai-google-scholar" title="Google Scholar"></i></a>
+
+               <!-- Visit Researchgate.net to set up an account -->
+               <!--<a class="btn btn-primary btn-lg" href="https://www.researchgate.net/profile/Katherine_Stasaski/"><i class="ai ai-researchgate" title="Research Gate"></i></a>-->
+
+               <!-- Visit LinkedIn.net to set up an account  -->
+               <a class="btn btn-primary btn-lg" href="https://www.linkedin.com/in/katie-stasaski-70a07772/"><i class="fa fa-linkedin" title="LinkedIn"></i></a>
+
+               <!-- Visit Twitter to set up an account  -->
+               <a class="btn btn-primary btn-lg" href="https://twitter.com/kitkat2020"><i class="fa fa-twitter" title="LinkedIn"></i></a>
+
             </div>
-        </center>
-    </body>
+
+        </div>
+        <!-- .row -->
+   </footer>
+
+
+   <!-- This in the include to style code, if you put a code snippet into your website, for instructions, see: https://github.com/google/code-prettify -->
+   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+</body>
 
 </html>

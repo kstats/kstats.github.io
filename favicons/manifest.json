@@ -1,0 +1,41 @@
+{
+ "name": "App",
+ "icons": [
+  {
+   "src": "\/eecs.iso",
+   "sizes": "36x36",
+   "type": "image\/iso",
+   "density": "0.75"
+  },
+  {
+   "src": "\/eecs.iso",
+   "sizes": "48x48",
+   "type": "image\/iso",
+   "density": "1.0"
+  },
+  {
+   "src": "\/eecs.iso",
+   "sizes": "72x72",
+   "type": "image\/iso",
+   "density": "1.5"
+  },
+  {
+   "src": "\/eecs.iso",
+   "sizes": "96x96",
+   "type": "image\/iso",
+   "density": "2.0"
+  },
+  {
+   "src": "\/eecs.iso",
+   "sizes": "144x144",
+   "type": "image\/iso",
+   "density": "3.0"
+  },
+  {
+   "src": "\/eecs.iso",
+   "sizes": "192x192",
+   "type": "image\/iso",
+   "density": "4.0"
+  }
+ ]
+}
